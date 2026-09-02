@@ -37,23 +37,43 @@ Evaluated on 1,000 held-out test transactions[cite: 1]:
 ---
 
 ## 🏗️ Architecture & Workflow
-[ Incoming Payload ] ──► [ Isolation Forest Anomaly Engine ]
-│
-          ▼
-[ Anomaly & Risk Score ]
-│
-          ▼
-[ Financial Friction & Exposure Tool ]
-│
-┌────────────────────────┼────────────────────────┐
-▼                        ▼                        ▼
-[ APPROVE ]            [ STEP_UP_AUTH ]        [ FREEZE_PAYOUT ]
-(Low Exposure)          (Medium Risk/2FA)       (High Fraud Threat)
-│                        │                        │
-└────────────────────────┴────────────────────────┘
-│
-▼
-[ Structured JSON Audit Trail ]
+
+```text
+                               ┌──────────────────────────┐
+                               │     Incoming Payload     │
+                               └────────────┬─────────────┘
+                                            │
+                                            ▼
+                               ┌──────────────────────────┐
+                               │ Isolation Forest Engine  │
+                               └────────────┬─────────────┘
+                                            │
+                                            ▼
+                               ┌──────────────────────────┐
+                               │  Anomaly & Risk Scoring  │
+                               └────────────┬─────────────┘
+                                            │
+                                            ▼
+                               ┌──────────────────────────┐
+                               │  Financial Friction &    │
+                               │  Risk Exposure Tool      │
+                               └────────────┬─────────────┘
+                                            │
+               ┌────────────────────────────┼────────────────────────────┐
+               ▼                            ▼                            ▼
+     ┌───────────────────┐        ┌───────────────────┐        ┌───────────────────┐
+     │      APPROVE      │        │   STEP_UP_AUTH    │        │   FREEZE_PAYOUT   │
+     │  (Low Risk /      │        │  (Medium Risk /   │        │  (High Risk /     │
+     │   Clean Tx)       │        │   Require 2FA)    │        │   Freeze Funds)   │
+     └─────────┬─────────┘        └─────────┬─────────┘        └─────────┬─────────┘
+               │                            │                            │
+               └────────────────────────────┼────────────────────────────┘
+                                            │
+                                            ▼
+                               ┌──────────────────────────┐
+                               │  Structured JSON Audit   │
+                               │         Trail            │
+                               └──────────────────────────┘
 ## 🛠️ Repository Structure
 
 ```text
