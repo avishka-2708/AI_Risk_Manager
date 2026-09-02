@@ -39,10 +39,10 @@ Evaluated on 1,000 held-out test transactions[cite: 1]:
 ## 🏗️ Architecture & Workflow
 [ Incoming Payload ] ──► [ Isolation Forest Anomaly Engine ]
 │
-▼
+          ▼
 [ Anomaly & Risk Score ]
 │
-▼
+          ▼
 [ Financial Friction & Exposure Tool ]
 │
 ┌────────────────────────┼────────────────────────┐
