@@ -28,6 +28,9 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.title("🛡️ Autonomous Risk & Chargeback Triage Agent")
+st.caption("Razorpay AI Buildathon — Track 02: AI Risk Manager | Intelligent Defense Pipeline")
+
 # ---------------------------------------------------------
 # DATA & MODEL INITIALIZATION (CACHED)
 # ---------------------------------------------------------
