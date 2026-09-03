@@ -14,7 +14,7 @@ This project implements a **Hybrid ML + Agentic Framework**:
 1. **Unsupervised Anomaly Detection:** An Isolation Forest model trained on transaction parameters (velocity, payment amounts, IP distance, and failure history).
 2. **Friction-Aware Decision Tools:** LangChain tools that calculate net financial exposure and evaluate false-positive friction penalty vs. chargeback risk.
 3. **Multi-Tiered Action Protocol:** Dynamically triggers `APPROVE`, `STEP_UP_AUTH` (2FA verification), or `FREEZE_PAYOUT` with structured audit trails.
-
+App Deployed- [here](https://airiskmanager-kjhdykbju6dcuv8xeyiugk.streamlit.app/)
 ---
 
 ## 📊 Performance Metrics (Held-Out Test Set)
@@ -81,4 +81,4 @@ Evaluated on 1,000 held-out test transactions[cite: 1]:
 ├── app.py                         
 ├── requirements.txt                
 └── README.md
-## [App Deployed]([url](https://airiskmanager-kjhdykbju6dcuv8xeyiugk.streamlit.app/))
+
