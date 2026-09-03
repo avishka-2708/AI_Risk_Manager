@@ -81,3 +81,4 @@ Evaluated on 1,000 held-out test transactions[cite: 1]:
 ├── app.py                         
 ├── requirements.txt                
 └── README.md
+## [App Deployed]([url](https://airiskmanager-kjhdykbju6dcuv8xeyiugk.streamlit.app/))
