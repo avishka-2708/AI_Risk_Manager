@@ -76,12 +76,3 @@ Evaluated on 1,000 held-out test transactions[cite: 1]:
                                └──────────────────────────┘
 
 ---
-
-## 🛠️ Repository Structure
-
-```text
-├── Razorpay_AI_Risk_Manager.ipynb 
-├── app.py                         
-├── requirements.txt                
-└── README.md
-
