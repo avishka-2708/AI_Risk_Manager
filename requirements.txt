@@ -3,3 +3,4 @@ numpy
 pandas
 scikit-learn
 langchain-community
+plotly
