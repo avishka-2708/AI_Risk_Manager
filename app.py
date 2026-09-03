@@ -12,16 +12,21 @@ from sklearn.ensemble import IsolationForest
 # ---------------------------------------------------------
 st.set_page_config(page_title="Razorpay AI Risk Manager", page_icon="🛡️", layout="wide")
 
-# Custom CSS for metric cards and subtle UI enhancements
+# Custom CSS for metric cards and subtle UI enhancements (Dark Mode Optimized)
 st.markdown("""
     <style>
-    .stMetric { background-color: #f0f2f6; padding: 15px; border-radius: 8px; border-left: 5px solid #0b5fb4; }
-    [data-testid="stSidebar"] { background-color: #0b172a; color: white; }
+    .stMetric { 
+        background-color: #1E293B; /* Dark slate background */
+        padding: 15px; 
+        border-radius: 8px; 
+        border-left: 5px solid #3B82F6; /* Bright blue accent */
+    }
+    [data-testid="stSidebar"] { 
+        background-color: #0F172A; 
+        color: white; 
+    }
     </style>
 """, unsafe_allow_html=True)
-
-st.title("🛡️ Autonomous Risk & Chargeback Triage Agent")
-st.caption("Razorpay AI Buildathon — Track 02: AI Risk Manager | Intelligent Defense Pipeline")
 
 # ---------------------------------------------------------
 # DATA & MODEL INITIALIZATION (CACHED)
