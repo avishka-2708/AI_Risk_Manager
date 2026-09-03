@@ -74,5 +74,3 @@ Evaluated on 1,000 held-out test transactions[cite: 1]:
                                │  Structured JSON Audit   │
                                │         Trail            │
                                └──────────────────────────┘
-
----
